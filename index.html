@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration Form</title>
+    <script>
+        function validateForm() {
+            let name = document.forms["regForm"]["name"].value;
+            let email = document.forms["regForm"]["email"].value;
+
+            if (name == "" || email == "") {
+                alert("Name and Email must be filled out");
+                return false;
+            }
+            alert("Registration Successful");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+
+    <form name="regForm" onsubmit="return validateForm()">
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        Phone: <input type="text" name="phone"><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
